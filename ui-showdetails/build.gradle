@@ -34,6 +34,7 @@ android {
 
     defaultConfig {
         minSdkVersion buildConfig.minSdk
+        manifestPlaceholders += ['appAuthRedirectScheme': 'empty']
 
         // Needed because we're using AssistedInject to inject our ViewModel
         javaCompileOptions {
@@ -74,8 +75,6 @@ dependencies {
     implementation Libs.AndroidX.Fragment.fragment
     implementation Libs.AndroidX.Fragment.fragmentKtx
     implementation Libs.AndroidX.Navigation.fragment
-
-    implementation Libs.Insetter.ktx
 
     implementation Libs.AndroidX.Compose.runtime
     implementation Libs.AndroidX.Compose.foundation
